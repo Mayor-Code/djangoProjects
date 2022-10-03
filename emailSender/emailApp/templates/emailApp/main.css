@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body {
+    margin: unset;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.container {
+    background: rgb(33, 34, 35);
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.email-sender {
+    height: 50%;
+    width: 50%;
+    border-radius: 1%;
+    background: rgb(20, 18, 18);
+    padding: 10px;
+    box-shadow: 15px 15px 10px rgb(114, 110, 110) ;
+
+}
+
+#recipient {
+    margin: 5% auto;
+    width: 40%;
+
+}
+input {
+    display: block;
+    width: 50%;
+    margin-left: 10%;
+    height: calc((50%)/5);
+    border: none;
+    border-bottom: 1px solid gray;
+    border-radius: 10px;
+    outline: none
+    
+}
+
+input[type="button"] {
+    width: 30%;
+    background: rgb(56, 95, 56);
+    border: none;
+    cursor: pointer;
+    color: white;
+    margin-top: 5px;
+}
+
+input:focus, textarea:focus {
+    border: 0;
+    border-bottom: 2px solid purple;
+    transform: translateX(3px);
+    box-shadow: 2px 2px 3px blue;
+}
+
+input[type="button"]:focus {
+    transform: unset;
+}
+
+input[type="button"]:active{
+    transform: translateY(4px);
+}
+
+textarea {
+    width: 80%;
+    display: block;
+    margin-left: 10%;
+    resize: none;
+    outline: none;
+    
+}
+
+@keyframes floating {
+    100% { transform: translateY(-3px);}
+    
+}
