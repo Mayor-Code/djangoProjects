@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 import os.path
 from pathlib import Path
 
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -123,3 +125,12 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+#This will fire up a local mail server on localhost:8025 and each messaged received will be printed to STDOUT
+#python -m smtpd -c DebuggingServer -n localhost:8025
+
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 8025
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = False

@@ -1,5 +1,4 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, redirect
 from django.core.mail import send_mail
 
 
@@ -9,5 +8,6 @@ def sendEmail(request):
     subject = request.POST['subject']
     content = request.POST['content']
 
-    send_mail(subject ,content, sender , [recipient], fail_silently=False)
+    send_mail(subject, content, sender, [recipient, ], fail_silently=False)
+    return redirect('/')
 # Create your views here.

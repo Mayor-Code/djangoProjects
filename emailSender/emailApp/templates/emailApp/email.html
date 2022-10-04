@@ -10,8 +10,11 @@
 <div class="container">
     <form class="email-sender" method="post" action="{% url 'emailApp:sendemail' %}">
         {% csrf_token %}
-        <input type="email" id="sender" placeholder="Sender" name="sender" required>
-        <input type="email" id="recipient" placeholder="Recipient" name="recipient" required>
+        <div class="address">
+            <input type="email" id="sender" placeholder="Sender" name="sender" required>
+            <input type="email" id="recipient" placeholder="Recipient" name="recipient" required>
+        </div>
+
         <hr>
         <input type="text" id="subject" placeholder="Subject" name="subject" required>
         <textarea name="content" id="" cols="30" rows="10" required></textarea>
